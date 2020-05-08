@@ -65,7 +65,7 @@ The following endpoints are available to use:
     * Example: http://localhost:8080/reportingstructure/03aa1462-ffa9-4978-901b-7c001562cf6f (This should be Ringo)
     * RESPONSE: Employee
 ```
-The Employee has a JSON schema of:
+The ReportingStructure has a JSON schema of:
 ```json
 {
   "type":"ReportingStructure",
