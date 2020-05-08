@@ -19,6 +19,7 @@ The following endpoints are available to use:
 * READ
     * HTTP Method: GET 
     * URL: localhost:8080/employee/{id}
+    * Example: http://localhost:8080/employee/03aa1462-ffa9-4978-901b-7c001562cf6f (This should be Ringo)
     * RESPONSE: Employee
 * UPDATE
     * HTTP Method: PUT 
