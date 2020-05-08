@@ -8,7 +8,7 @@ accessed and mutated in the database without impacting the snapshot.
 ### How to Run
 The application may be executed by running `gradlew bootRun`.
 
-### How to Use
+### Employee endpoint information
 The following endpoints are available to use:
 ```
 * CREATE
@@ -55,6 +55,32 @@ The Employee has a JSON schema of:
 }
 ```
 For all endpoints that require an "id" in the URL, this is the "employeeId" field.
+
+### ReportingStructure endpoint information
+The following endpoints are available to use:
+```
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/reportingstructure/{id}
+    * Example: http://localhost:8080/reportingstructure/03aa1462-ffa9-4978-901b-7c001562cf6f (This should be Ringo)
+    * RESPONSE: Employee
+```
+The Employee has a JSON schema of:
+```json
+{
+  "type":"ReportingStructure",
+  "properties": {
+    "employee": {
+      "type": "Employee"
+    },
+    "numberOfReports": {
+      "type": "integer"
+    }
+  }
+}
+```
+For all endpoints that require an "id" in the URL, this is the "employeeId" field.
+
 
 ## What to Implement
 Clone or download the repository, do not fork it.
