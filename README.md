@@ -63,7 +63,7 @@ The following endpoints are available to use:
     * HTTP Method: GET 
     * URL: localhost:8080/reportingstructure/{id}
     * Example: http://localhost:8080/reportingstructure/03aa1462-ffa9-4978-901b-7c001562cf6f (This should be Ringo)
-    * RESPONSE: Employee
+    * RESPONSE: ReportingStructure
 ```
 The ReportingStructure has a JSON schema of:
 ```json
@@ -81,6 +81,37 @@ The ReportingStructure has a JSON schema of:
 ```
 For all endpoints that require an "id" in the URL, this is the "employeeId" field.
 
+### Compensation endpoint information
+The following endpoints are available to use:
+```
+* CREATE
+    * HTTP Method: POST 
+    * URL: localhost:8080/compensation
+    * PAYLOAD: Compensation
+    * RESPONSE: Compensation
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/compensation/{id}
+    * RESPONSE: Commpensation[]
+```
+The ReportingStructure has a JSON schema of:
+```json
+{
+  "type":"Compensation",
+  "properties": {
+    "employee": {
+      "type": "Employee"
+    },
+    "salary": {
+      "type": "number"
+    },
+    "effectiveDate": {
+      "type": "Date"
+    }
+  }
+}
+```
+For all endpoints that require an "id" in the URL, this is the "employeeId" field.
 
 ## What to Implement
 Clone or download the repository, do not fork it.
